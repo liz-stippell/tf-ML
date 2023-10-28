@@ -7,4 +7,4 @@ There are two files in this introduction:
 
 Both files use a neural network to solve the following equation:
 
-$$$ y = 2x -1 $$$
+$$ y = 2x -1 $$
