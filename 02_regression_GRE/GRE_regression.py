@@ -1,0 +1,43 @@
+import tensorflow as tf
+import numpy as np
+from tensorflow import keras
+
+print(tf.__version__)
+
+# Build a simple Sequential model
+model = tf.keras.Sequential([
+  keras.layers.Dense(units=64, input_shape=[2], activation="relu"),
+  keras.layers.Dense(units=32, input_shape=[2], activation="relu"),
+  keras.layers.Dense(units=3, input_shape=[2], activation="softmax")
+])
+
+# Compile the model
+model.compile(optimizer='sgd', loss='sparse_categorical_crossentropy', metrics=["accuracy"])
+
+# Declare model inputs and outputs for training
+x_train = np.loadtxt("combined_data.txt") #[:,0]
+y_train = np.loadtxt("admit_data.txt")
+
+print(np.shape(x_train))
+
+#x_train = np.array([140, 150, 155,  160, 170])
+#y_train = np.array([0.00, 0.10, 0.50, 0.90, 1.00])
+
+#x_train = np.array([1.0, 2.0, 3.0, 4.0])
+#y_train = np.array([5.0, 8.0, 11.0, 14.0])
+
+# Train the model
+model.fit(x_train, y_train, epochs=100)
+
+prediction = np.array([161, 161]).reshape(1, 2)
+
+print(np.shape(prediction))
+
+# Make a prediction
+print("Prediction for 161: " + str(model.predict(prediction)))
+predicted_class = np.argmax(model.predict(prediction))
+print(predicted_class)
+
+# Evaluate the model
+loss = model.evaluate(x_train, y_train)
+tf.print(f'Loss: {loss}')
