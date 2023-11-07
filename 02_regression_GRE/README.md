@@ -3,7 +3,7 @@
 #### This project involves looking at Graduate Record Examination (GRE) scores and seeing if a student's score would allow them admission into a variety of universities.
 
 Files:
-1. `generate_scores.py`: Generates random scores that allow admission into the University of Southern California Chemistry Program.
+1. `generate_data.py`: Generates random scores that allow admission into the University of Southern California Chemistry Program.
 - This file may generate four different text files, which store the data:
     - `combined_data.txt` which includes the data for both the verbal and quantitative assessments
     - `admit_data.txt` which includes whether or not (or maybe) a student would be admitted given their scores and assigns a value of 0 (no admission), 1 (maybe admission), and 2 (definite admission). (WORK IN PROGRESS - MUST BE CORRECTED)
