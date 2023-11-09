@@ -8,3 +8,5 @@ Here, two different methods are introduced:
 2. `02_normalized_regression_training`: Regression
 - A regression analysis is used to predict the probability of admission instead of classifying the admission as in the first example. Here, a decimal is used to predict the admission, with a value of `0.00` meaning no possible admission and `1.00` given to mean a guaranteed chance of admission.
 - This regression analysis further uses <b> normalized data </b> for a more accurate result.
+
+The hypothetical data used in this project is generated via a python file that is based on accepted admissions scores reported <a href="https://magoosh.com/gre/gre-scores-for-top-universities/#usc" target="_blank">Here.</a>
