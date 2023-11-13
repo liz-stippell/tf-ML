@@ -19,5 +19,3 @@ Focusing on:
 5. Now things should be ready to go!
 
 <b>NOTE:</b> This installation instruction is extremely simple, and assumes Python and conda are already installed.
-
-Test
